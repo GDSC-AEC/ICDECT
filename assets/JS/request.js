@@ -15,10 +15,11 @@ async function para(id, data){
 }
 
 async function LoadNames(){
-    let Odata = await httpGet('https://ismt-dynamic.herokuapp.com/organizing')
-    let Idata = await httpGet('https://ismt-dynamic.herokuapp.com/international')
-    let Ndata = await httpGet('https://ismt-dynamic.herokuapp.com/national')
-    let Tdata = await httpGet('https://ismt-dynamic.herokuapp.com/technical')
+    let Odata = await httpGet('https://dect-committee.herokuapp.com/organizing')
+    let Tdata = await httpGet('https://dect-committee.herokuapp.com/technical')
+    let Sdata = await httpGet('https://dect-committee.herokuapp.com/steering')
+    let Idata = await httpGet('https://dect-committee.herokuapp.com/international')
+    let Ndata = await httpGet('https://dect-committee.herokuapp.com/national')
 
 
 
@@ -54,6 +55,15 @@ async function LoadNames(){
         function(value, index) {
         if ( index != 0 ) {
             para('Technical', value)
+        }
+    });
+
+
+    // for Steering
+    Sdata.forEach(
+        function(value, index) {
+        if ( index != 0 ) {
+            para('Steering', value)
         }
     });
 
