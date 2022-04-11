@@ -1437,6 +1437,12 @@ h4.text-divider.text-center {
 .mlr_1{
   margin: 0 1rem;
 }
+.span_international{
+  line-height: 1;
+}
+.ish_image{
+  object-fit: cover;
+}
 @media screen and (max-width:420px) {
 	.heading_department{
 		font-size: 2.5rem;
