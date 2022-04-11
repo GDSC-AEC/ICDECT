@@ -298,13 +298,19 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .mobile-nav-toggle {
     display: block;
+  }
+  .img_logo{
+    display: none;
   }
 
   .navbar ul {
     display: none;
+  }
+  .toggle_logo{
+    margin: 0 1rem 0 0;
   }
 }
 .navbar-mobile {
@@ -1426,6 +1432,10 @@ hr{
 }
 h4.text-divider.text-center {
     margin: 0;
+}
+
+.mlr_1{
+  margin: 0 1rem;
 }
 @media screen and (max-width:420px) {
 	.heading_department{
