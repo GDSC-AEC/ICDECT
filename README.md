@@ -1,2 +1,2 @@
-# ICISMT
-Civil dept Conference Website
+# ICDECT
+CSE dept Conference Website
