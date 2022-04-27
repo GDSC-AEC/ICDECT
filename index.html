@@ -47,9 +47,12 @@
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  
   <!-- Project Main CSS File -->
   <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!-- form CSS File -->
+  <link rel="stylesheet" href="./assets/css/form.css">
 
   <!-- Activate Libraries -->
   <!-- <script src="./assets/Libraries/JQuery/jquery.min.js"></script> -->
@@ -778,29 +781,19 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
+            <form onsubmit="sendEmail(); reset(); return false;">
+
+              <div class = "name_Email">
+                <input type="text" id="name" placeholder="Your Name" required>
+              <input type="email" id="email" placeholder="Your Email" required>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+
+              <div class = "subject">
+                <input type="text" id="subject" placeholder="Subject" required>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
+              
+              <textarea id="message" rows="5" placeholder="Message"></textarea>
+              <center><button class = "submit_button" type="submit" id="submit_button">Send Message</button></center>
             </form>
 
           </div>
@@ -923,6 +916,10 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="./assets/JS/particle.js"></script>
   <script src="./assets/Libraries/jquery-ui/jquery-ui.min.js"></script>
+  
+  <!-- from JS file -->
+  <script type="text/javascript" src="./assets/JS/form.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 
@@ -937,5 +934,4 @@
 <script src="./assets/JS/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </html>
