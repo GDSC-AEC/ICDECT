@@ -38,8 +38,7 @@
   <link href="./assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- CSS, Semantic UI, Bootstrap Material Design-->
-  <link rel="stylesheet" href="./assets/CSS/styles.css">
+
   <link rel="stylesheet" href="./assets/CSS/responsive.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -71,9 +70,8 @@
 </head>
 
 <body>
-<style>
-
-/*
+  <style>
+    /*
 
 All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
         
@@ -83,7 +81,7 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 
 */
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
 
 
@@ -91,35 +89,35 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 
 
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	/* Compensate for excess margin on outer gallery flex items */
-	margin: -1rem -1rem;
-}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      /* Compensate for excess margin on outer gallery flex items */
+      margin: -1rem -1rem;
+    }
 
-.gallery-item {
-	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 24rem;
-	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 1rem;
-	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-}
+    .gallery-item {
+      /* Minimum width of 24rem and grow to fit available space */
+      flex: 1 0 24rem;
+      /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+      margin: 1rem;
+      box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
 
-.gallery-image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 400ms ease-out;
-}
+    .gallery-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms ease-out;
+    }
 
-.gallery-image:hover {
-	transform: scale(1.15);
-}
+    .gallery-image:hover {
+      transform: scale(1.15);
+    }
 
-/*
+    /*
 
 The following rule will only run if your browser supports CSS grid.
 
@@ -127,128 +125,128 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 */
 
-@supports (display: grid) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		grid-gap: 2rem;
-	}
+    @supports (display: grid) {
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+      }
 
-	.gallery,
-	.gallery-item {
-		margin: 0;
-	}
-}
-.gallery{
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))!important;
-}
+      .gallery,
+      .gallery-item {
+        margin: 0;
+      }
+    }
 
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 10px;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
+    }
 
 
-* {
-  box-sizing: border-box;
-}
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
 
-img {
-  vertical-align: middle;
-}
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
 
-body{
-    margin: 0;
-}
+    /* Position the "next button" to the right */
+    .next {
+      right: 10px;
+      border-radius: 3px 0 0 3px;
+    }
 
-</style>
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    body {
+      margin: 0;
+    }
+  </style>
 
   <!-- ======= Header - Navbar ======= -->
   <header id="header" class="fixed-top ">
-   
+
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-    
-      
+
+
 
       <h1 class="logo me-auto me-lg-0">
         <a href="index.html">
@@ -259,391 +257,413 @@ body{
           </svg>
         </a>
       </h1>
-      
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="/icdect2022/about.html">About The Conference</a></li>
-                <li><a href="/icdect2022/about.html#college">About The College</a></li>
-                <li><a href="/icdect2022/about.html#department">The Organizing Department</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link scrollto" href="/icdect2022/index.html#callforpapers">Call for papers</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/special_sessions.html">Special Sessions</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/submissions.html">Submissions</a></li>
-            
-            <li><a class="nav-link scrollto " href="/icdect2022/registeration.html">Registration</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/index.html#dates">Dates</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/team.html">Committee</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/gallery.html">Gallery</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/index.html#venue">Venue</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/index.html#contact">Contact</a></li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <img onclick="location.href='/'" style="cursor: pointer;" src="./assets/Images/Logos/LOGO_A.png" height="30px"
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/icdect2022/about.html">About The Conference</a></li>
+              <li><a href="/icdect2022/about.html#college">About The College</a></li>
+              <li><a href="/icdect2022/about.html#department">The Organizing Department</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="/icdect2022/index.html#callforpapers">Call for papers</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/special_sessions.html">Special Sessions</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/submissions.html">Submissions</a></li>
+
+          <li><a class="nav-link scrollto " href="/icdect2022/registeration.html">Registration</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/index.html#dates">Dates</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/team.html">Committee</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/gallery.html">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/index.html#venue">Venue</a></li>
+          <li><a class="nav-link scrollto" href="/icdect2022/index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <img onclick="location.href='/'" style="cursor: pointer;" src="./assets/Images/Logos/LOGO_A.png" height="30px"
         width="auto" alt="" class="dude">
-    
+
 
 
     </div>
-   
+
   </header>
   <!-- End Header -->
 
 
-      <!-- ======= Hero Section ======= -->
-      <section id="hero" class="d-flex align-items-center justify-content-center" style="height: 50vh !important;" data-zs-src=
-      '[
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center" style="height: 50vh !important;"
+    data-zs-src='[
 "https://images.unsplash.com/photo-1507643179773-3e975d7ac515?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"      ]'
-      data-zs-autoplay="true"  data-zs-bullets="false"
-      
-      >
-          <div class="container" data-aos="fade-up">
-            <div
-              class="row justify-content-center"
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              <div class="col-xl-6 col-lg-8">
-                <h1 style="font-size: 50px; line-height: 50px; color: cornsilk; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-                  Gallery
-                </h1>
-                <!-- <h2 style="font-size: 30px;">Data Engineering and Communication Technology <span>(ICDECT) 2022</span></h2> -->
-                <br />
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <!-- End Hero -->
-        <main id="main">
-      
-          
-      
-                <div class="container">
-                    <div class="mySlides">
-                        <div class="numbertext">(1 / 27)</div>
-                        <img src="assets/Dect-Images/Image 1.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(2 / 27)</div>
-                        <img src="assets/Dect-Images/Image 2.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(3 / 27)</div>
-                        <img src="assets/Dect-Images/Image 3.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(4 / 27)</div>
-                        <img src="assets/Dect-Images/Image 4.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(5 / 27)</div>
-                        <img src="assets/Dect-Images/Image 5.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(6 / 27)</div>
-                        <img src="assets/Dect-Images/Image 6.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(7 / 27)</div>
-                        <img src="assets/Dect-Images/Image 7.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                  <div class="mySlides">
-                        <div class="numbertext">(8 / 27)</div>
-                        <img src="assets/Dect-Images/Image 8.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(9 / 27)</div>
-                        <img src="assets/Dect-Images/Image 9.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(10 / 27)</div>
-                        <img src="assets/Dect-Images/Image 10.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(11 / 27)</div>
-                        <img src="assets/Dect-Images/Image 11.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(12 / 27)</div>
-                        <img src="assets/Dect-Images/Image 12.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(13 / 27)</div>
-                        <img src="assets/Dect-Images/Image 13.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(14 / 27)</div>
-                        <img src="assets/Dect-Images/Image 14.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(15 / 27)</div>
-                        <img src="assets/Dect-Images/Image 15.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(16 / 27)</div>
-                        <img src="assets/Dect-Images/Image 16.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(17 / 27)</div>
-                        <img src="assets/Dect-Images/Image 17.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(18 / 27)</div>
-                        <img src="assets/Dect-Images/Image 18.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(19 / 27)</div>
-                        <img src="assets/Dect-Images/Image 19.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(20 / 27)</div>
-                        <img src="assets/Dect-Images/Image 20.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(21 / 27)</div>
-                        <img src="assets/Dect-Images/Image 21.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(22 / 27)</div>
-                        <img src="assets/Dect-Images/Image 22.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(23 / 27)</div>
-                        <img src="assets/Dect-Images/Image 23.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(24 / 27)</div>
-                        <img src="assets/Dect-Images/Image 24.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(25 / 27)</div>
-                        <img src="assets/Dect-Images/Image 25.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(26 / 27)</div>
-                        <img src="assets/Dect-Images/Image 26.jpeg" style="width:100%">
-                      </div>
-                      
-                  
-                      <div class="mySlides">
-                        <div class="numbertext">(27 / 27)</div>
-                        <img src="assets/Dect-Images/Image 27.jpeg" style="width:100%">
-                      </div>
-                      
-                    <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a>
-                  
-                    <div class="caption-container">
-                      <p id="caption"></p>
-                    </div>
-                  
-                    <div class="row">
-                        <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 7.jpeg" style="width:100%" onclick="currentSlide(7)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 8.jpeg" style="width:100%" onclick="currentSlide(8)" alt="">
-                          </div>
-                            <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 9.jpeg" style="width:100%" onclick="currentSlide(9)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 10.jpeg" style="width:100%" onclick="currentSlide(10)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 11.jpeg" style="width:100%" onclick="currentSlide(11)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 12.jpeg" style="width:100%" onclick="currentSlide(12)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 13.jpeg" style="width:100%" onclick="currentSlide(13)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 14.jpeg" style="width:100%" onclick="currentSlide(14)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 15.jpeg" style="width:100%" onclick="currentSlide(15)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 16.jpeg" style="width:100%" onclick="currentSlide(16)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 17.jpeg" style="width:100%" onclick="currentSlide(17)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 18.jpeg" style="width:100%" onclick="currentSlide(18)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 19.jpeg" style="width:100%" onclick="currentSlide(19)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 20.jpeg" style="width:100%" onclick="currentSlide(20)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 21.jpeg" style="width:100%" onclick="currentSlide(21)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 22.jpeg" style="width:100%" onclick="currentSlide(22)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 23.jpeg" style="width:100%" onclick="currentSlide(23)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 24.jpeg" style="width:100%" onclick="currentSlide(24)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 25.jpeg" style="width:100%" onclick="currentSlide(25)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 26.jpeg" style="width:100%" onclick="currentSlide(26)" alt="">
-                          </div>
-                            
-                        
-                          <div class="column">
-                            <img class="demo cursor" src="assets/Dect-Images/Image 27.jpeg" style="width:100%" onclick="currentSlide(27)" alt="">
-                          </div>
-                    </div>
-                  
-<div id="myModal" class="modal">
-
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-  
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
-  
-  </div>
-      
+    data-zs-autoplay="true" data-zs-bullets="false">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1
+            style="font-size: 50px; line-height: 50px; color: cornsilk; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            Gallery
+          </h1>
+          <!-- <h2 style="font-size: 30px;">Data Engineering and Communication Technology <span>(ICDECT) 2022</span></h2> -->
+          <br />
+        </div>
       </div>
-        </main>
-   <!-- ======= Footer ======= -->
-   <footer id="footer">
+    </div>
+  </section>
+
+
+  <!-- End Hero -->
+  <main id="main">
+
+
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">(1 / 27)</div>
+        <img src="assets/Dect-Images/Image 1.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(2 / 27)</div>
+        <img src="assets/Dect-Images/Image 2.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(3 / 27)</div>
+        <img src="assets/Dect-Images/Image 3.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(4 / 27)</div>
+        <img src="assets/Dect-Images/Image 4.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(5 / 27)</div>
+        <img src="assets/Dect-Images/Image 5.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(6 / 27)</div>
+        <img src="assets/Dect-Images/Image 6.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(7 / 27)</div>
+        <img src="assets/Dect-Images/Image 7.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(8 / 27)</div>
+        <img src="assets/Dect-Images/Image 8.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(9 / 27)</div>
+        <img src="assets/Dect-Images/Image 9.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(10 / 27)</div>
+        <img src="assets/Dect-Images/Image 10.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(11 / 27)</div>
+        <img src="assets/Dect-Images/Image 11.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(12 / 27)</div>
+        <img src="assets/Dect-Images/Image 12.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(13 / 27)</div>
+        <img src="assets/Dect-Images/Image 13.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(14 / 27)</div>
+        <img src="assets/Dect-Images/Image 14.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(15 / 27)</div>
+        <img src="assets/Dect-Images/Image 15.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(16 / 27)</div>
+        <img src="assets/Dect-Images/Image 16.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(17 / 27)</div>
+        <img src="assets/Dect-Images/Image 17.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(18 / 27)</div>
+        <img src="assets/Dect-Images/Image 18.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(19 / 27)</div>
+        <img src="assets/Dect-Images/Image 19.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(20 / 27)</div>
+        <img src="assets/Dect-Images/Image 20.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(21 / 27)</div>
+        <img src="assets/Dect-Images/Image 21.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(22 / 27)</div>
+        <img src="assets/Dect-Images/Image 22.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(23 / 27)</div>
+        <img src="assets/Dect-Images/Image 23.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(24 / 27)</div>
+        <img src="assets/Dect-Images/Image 24.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(25 / 27)</div>
+        <img src="assets/Dect-Images/Image 25.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(26 / 27)</div>
+        <img src="assets/Dect-Images/Image 26.jpeg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">(27 / 27)</div>
+        <img src="assets/Dect-Images/Image 27.jpeg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 1.jpeg" style="width:100%" onclick="currentSlide(1)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 2.jpeg" style="width:100%" onclick="currentSlide(2)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 3.jpeg" style="width:100%" onclick="currentSlide(3)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 4.jpeg" style="width:100%" onclick="currentSlide(4)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 5.jpeg" style="width:100%" onclick="currentSlide(5)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 6.jpeg" style="width:100%" onclick="currentSlide(6)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 7.jpeg" style="width:100%" onclick="currentSlide(7)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 8.jpeg" style="width:100%" onclick="currentSlide(8)"
+            alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 9.jpeg" style="width:100%" onclick="currentSlide(9)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 10.jpeg" style="width:100%" onclick="currentSlide(10)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 11.jpeg" style="width:100%" onclick="currentSlide(11)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 12.jpeg" style="width:100%" onclick="currentSlide(12)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 13.jpeg" style="width:100%" onclick="currentSlide(13)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 14.jpeg" style="width:100%" onclick="currentSlide(14)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 15.jpeg" style="width:100%" onclick="currentSlide(15)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 16.jpeg" style="width:100%" onclick="currentSlide(16)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 17.jpeg" style="width:100%" onclick="currentSlide(17)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 18.jpeg" style="width:100%" onclick="currentSlide(18)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 19.jpeg" style="width:100%" onclick="currentSlide(19)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 20.jpeg" style="width:100%" onclick="currentSlide(20)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 21.jpeg" style="width:100%" onclick="currentSlide(21)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 22.jpeg" style="width:100%" onclick="currentSlide(22)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 23.jpeg" style="width:100%" onclick="currentSlide(23)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 24.jpeg" style="width:100%" onclick="currentSlide(24)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 25.jpeg" style="width:100%" onclick="currentSlide(25)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 26.jpeg" style="width:100%" onclick="currentSlide(26)"
+            alt="">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="assets/Dect-Images/Image 27.jpeg" style="width:100%" onclick="currentSlide(27)"
+            alt="">
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+      </div>
+
+    </div>
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -653,20 +673,23 @@ body{
               <h3><span>ICDECT - 2022</span></h3>
               <p>
                 ADITYA ENGINEERING COLLEGE
-                  Aditya Nagar, ADB Road,
-                  Surampalem - Pin:533437
-                  East-Godavari District,
-                  Andhra Pradesh,
-                  INDIA.<br><br>
+                Aditya Nagar, ADB Road,
+                Surampalem - Pin:533437
+                East-Godavari District,
+                Andhra Pradesh,
+                INDIA.<br><br>
 
                 <strong>Email:</strong> ICDECT2022@aec.edu.in<br>
               </p>
               <div class="social-links mt-3">
                 <a href="https://twitter.com/AdityaEnggClg" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="https://www.facebook.com/AECaditya" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/aditya_engg_colleges/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g" class="youtube"><i class="bx bxl-youtube"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=+919949876662" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://www.instagram.com/aditya_engg_colleges/" class="instagram"><i
+                    class="bx bxl-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g" class="youtube"><i
+                    class="bx bxl-youtube"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+919949876662" class="whatsapp"><i
+                    class="bx bxl-whatsapp"></i></a>
               </div>
             </div>
           </div>
@@ -722,34 +745,34 @@ body{
 
 
   <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
   </script>
 
 
