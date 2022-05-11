@@ -1475,6 +1475,7 @@ h4.text-divider.text-center {
 }
 .row_strike_off {
   text-decoration: line-through;
+  margin: 0 1rem 0 0;
 }
 .header_nav {
   padding: 1rem 0 0 0 !important;
