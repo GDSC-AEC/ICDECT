@@ -51,6 +51,13 @@
     <link rel="stylesheet" type="text/css" href="./assets/Libraries/JQuery/Slider-Zoom-Boom/dist/zoomslider.css">
     <script type="text/javascript" src="./assets/Libraries/JQuery/Slider-Zoom-Boom/demo/js/modernizr-2.6.2.min.js"></script>
 
+    <!-- page view count -->
+    <script async src="https://api.countapi.xyz/hit/icdect.com/4baa0045-5bf9-4810-90e9-8fe124647e31?callback=websiteVisits"></script>
+    <script>
+      function websiteVisits(response) {
+          document.getElementById('visits').innerText = response.value;
+      }
+    </script>
 
 </head>
 
@@ -87,7 +94,7 @@
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="/icdect2022/index.html#callforpapers">Call for papers</a></li>
-            <li><a class="nav-link scrollto" href="/icdect2022/special_sessions.html">Special Sessions</a></li>
+            <!-- <li><a class="nav-link scrollto" href="/icdect2022/special_sessions.html">Special Sessions</a></li> -->
             <li><a class="nav-link scrollto" href="/icdect2022/submissions.html">Submissions</a></li>
             
             <li><a class="nav-link scrollto " href="/icdect2022/registeration.html">Registration</a></li>
@@ -352,7 +359,8 @@ Our faculty members motivate or support the students in getting placed in MNC, t
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
-
+            <br />
+            <h6>This site has been visited <span id="visits" style="color:#fd6607;"></span> times.</h6>
           </div>
 
         </div>
